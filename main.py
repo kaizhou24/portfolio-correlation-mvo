@@ -1,9 +1,18 @@
 import yfinance as yf
+import pandas as pd
 
 def main():
-    aapl_ticker = yf.Ticker('AAPL')
-    aapl_history = aapl_ticker.history(period="5y")
-    print(aapl_history)
+    portfolio_tickers = ['AAPL', 'MSFT', 'NVDA', 'GOOG']
+    
+    close_prices = {}
+
+    for ticker in portfolio_tickers:
+        stock_obj = yf.Ticker(ticker)
+        stock_data = stock_obj.history(period="1y")
+        close_prices[ticker] = stock_data['Close']
+    
+    portfolio_df = pd.DataFrame(close_prices)
+    print(portfolio_df)
 
 
 if __name__ == "__main__":
