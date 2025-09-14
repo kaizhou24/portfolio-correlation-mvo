@@ -1,5 +1,9 @@
+import yfinance as yf
+
 def main():
-    print("Hello from portfolio-correlation-mvo!")
+    aapl_ticker = yf.Ticker('AAPL')
+    aapl_history = aapl_ticker.history(period="5y")
+    print(aapl_history)
 
 
 if __name__ == "__main__":
