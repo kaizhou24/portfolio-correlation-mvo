@@ -15,9 +15,9 @@ The script runs through the whole process in one go:
 
 The outputs help make the trade-offs in investing more concrete:
 
-<div align="center">
-  <img src="correlation_heatmap.png" alt="Correlation Heatmap" width="35%" style="display: inline-block; margin-right: 10px;">
-  <img src="efficient_frontier.png" alt="Efficient Frontier" width="60%" style="display: inline-block;">
+<div align="center" style="height: 400px;">
+  <img src="efficient_frontier.png" alt="Efficient Frontier" style="height: 100%; display: inline-block; margin-right: 10px;">
+  <img src="correlation_heatmap.png" alt="Correlation Heatmap" style="height: 100%; display: inline-block;">
 </div>
 
 * **Correlation Heatmap:** Made with `seaborn` to see how stocks move together. I found that my tech picks were very correlated, meaning they often rise and fall at the same time.
