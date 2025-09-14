@@ -12,7 +12,9 @@ def main():
         close_prices[ticker] = stock_data['Close']
     
     portfolio_df = pd.DataFrame(close_prices)
-    print(portfolio_df)
+    daily_returns = portfolio_df.pct_change().dropna()
+    print("Daily Returns (%):")
+    print(daily_returns * 100)
 
 
 if __name__ == "__main__":
